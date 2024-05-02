@@ -1,0 +1,2 @@
+#FORMAT: BEACON
+#NAME:Digital Scholarly Editions Static Site Cookiecutter
