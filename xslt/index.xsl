@@ -26,7 +26,7 @@
                 <xsl:call-template name="nav_bar"/>
                 <main class="flex-shrink-0">
                     <div class="container">
-                        <h1><xsl:value-of select="$project_short_title"/></h1>
+                        <h1>Hallo: <xsl:value-of select="$project_short_title"/></h1>
                         <h2><xsl:value-of select="$project_title"/></h2>
                     </div>
                 </main>
