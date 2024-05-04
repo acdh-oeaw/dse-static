@@ -43,7 +43,7 @@ jobs:
       - name: Fetch the data
         run: ./fetch_data.sh
       - name: Build the app
-        run: ./transform.sh
+        run: ant
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
