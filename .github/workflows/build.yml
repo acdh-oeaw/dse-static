@@ -60,7 +60,7 @@ jobs:
         uses: actions/checkout@v4
       
       - name: create htpasswd file
-        run: echo ${{ env.REGISTRY }} | htpasswd -c .htpasswd admin
+        run: echo "${{ env.IMAGE_NAME }}" | htpasswd -c .htpasswd admin
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
