@@ -14,7 +14,7 @@
 
     <xsl:template match="/">
         <xsl:variable name="doc_title">
-            <xsl:value-of select='"DSE Static-Site"'/>
+            <xsl:value-of select='"404 - Page not found"'/>
         </xsl:variable>
         <html class="h-100">
             <head>
@@ -26,40 +26,11 @@
                 <xsl:call-template name="nav_bar"/>
                 <main class="flex-shrink-0">
                     <div class="container">
-                        <h1><xsl:value-of select="$project_short_title"/></h1>
-                        <h2><xsl:value-of select="$project_title"/></h2>
+                        <h1>404</h1>
                     </div>
                 </main>
                 <xsl:call-template name="html_footer"/>
             </body>
         </html>
-    </xsl:template>
-    <xsl:template match="tei:div//tei:head">
-        <h2 id="{generate-id()}"><xsl:apply-templates/></h2>
-    </xsl:template>
-    
-    <xsl:template match="tei:p">
-        <p id="{generate-id()}"><xsl:apply-templates/></p>
-    </xsl:template>
-    
-    <xsl:template match="tei:list">
-        <ul id="{generate-id()}"><xsl:apply-templates/></ul>
-    </xsl:template>
-    
-    <xsl:template match="tei:item">
-        <li id="{generate-id()}"><xsl:apply-templates/></li>
-    </xsl:template>
-    <xsl:template match="tei:ref">
-        <xsl:choose>
-            <xsl:when test="starts-with(data(@target), 'http')">
-                <a>
-                    <xsl:attribute name="href"><xsl:value-of select="@target"/></xsl:attribute>
-                    <xsl:value-of select="."/>
-                </a>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:apply-templates/>
-            </xsl:otherwise>
-        </xsl:choose>
     </xsl:template>
 </xsl:stylesheet>

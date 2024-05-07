@@ -58,7 +58,7 @@ jobs:
         uses: actions/deploy-pages@v4
 
       - name: create htpasswd file
-        run: htpasswd -b -c .htpasswd admin "${{ env.IMAGE_NAME }}"
+        run: htpasswd -b -c .htpasswd admin "${{ env.IMAGE_NAME }}" # for production pass in a GH-Secret
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
