@@ -32,7 +32,7 @@
                     <div class="container">
                         <h1><xsl:value-of select="$doc_title"/></h1>
                         <div id="map"/>
-                        <table class="table" id="placesTable">
+                        <table id="placesTable">
                             <thead>
                                 <tr>
                                     <th scope="col">Ortsname</th>

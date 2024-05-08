@@ -31,7 +31,6 @@
 * To run the container: `docker run -p 80:80 --rm --name dse-static dse-static`
 * in case you want to password protect you server, create a `.htpasswd` file (e.g. https://htpasswdgenerator.de/) and modifiy `Dockerfile` to your needs; e.g. run `htpasswd -b -c .htpasswd admin mypassword`
 
-
 ### run image from GitHub Container Registry
 
 `docker run -p 80:80 --rm --name dse-static ghcr.io/acdh-oeaw/dse-static:main`
